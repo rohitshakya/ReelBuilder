@@ -5,6 +5,14 @@ Thanks for helping make ReelForge better.
 ## Development setup
 
 ```bash
+bash scripts/setup.sh
+source .venv/bin/activate
+pre-commit install
+```
+
+Or manually:
+
+```bash
 git clone https://github.com/reelforge/reelforge.git
 cd reelforge
 python -m venv .venv

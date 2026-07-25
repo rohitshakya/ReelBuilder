@@ -60,49 +60,114 @@ Most “image → video” tools are slideshows. ReelForge is built to feel edit
 - **Python 3.12+**
 - **[FFmpeg](https://ffmpeg.org/download.html)** on your `PATH`
 
+---
+
+## One-command setup
+
+From the project root:
+
+```bash
+bash scripts/setup.sh
+```
+
+This will:
+
+1. Check for Python 3.12+
+2. Install FFmpeg if missing (Homebrew / apt)
+3. Create `.venv` and install ReelForge
+4. Generate example slides if needed
+
+Then activate the environment:
+
+```bash
+source .venv/bin/activate
+```
+
+### Manual install (alternative)
+
 ```bash
 # macOS
 brew install ffmpeg
 
 # Ubuntu / Debian
 sudo apt install ffmpeg
-```
 
----
-
-## Installation
-
-```bash
-pip install reelforge
-
-# or from source
-git clone https://github.com/reelforge/reelforge.git
-cd reelforge
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -e ".[dev]"
 ```
 
 ---
 
-## Quick start
+## Use with your own images
+
+### 1. Put photos in a folder
+
+Name them so they sort naturally:
+
+```text
+~/Desktop/my-slides/
+  001.jpg
+  002.jpg
+  003.png
+  …
+```
+
+Supported: `.jpg`, `.jpeg`, `.png`, `.webp`, `.bmp`, `.tiff`
+
+### 2. Activate & preview
 
 ```bash
-# Preview the slide list
-reelforge preview --images ./examples/slides
+source .venv/bin/activate
+reelforge preview --images ~/Desktop/my-slides
+```
 
-# Render a reel
+### 3. Render
+
+**Basic:**
+
+```bash
+reelforge render \
+  --images ~/Desktop/my-slides \
+  --output ~/Desktop/my_reel.mp4 \
+  --template modern
+```
+
+**With music + logo:**
+
+```bash
+reelforge render \
+  --images ~/Desktop/my-slides \
+  --music ~/Desktop/song.mp3 \
+  --watermark ~/Desktop/logo.png \
+  --output ~/Desktop/my_reel.mp4 \
+  --template modern \
+  --preset instagram \
+  --duration 3.0
+```
+
+| Flag | What it does |
+|------|----------------|
+| `--images` / `-i` | Folder with your photos |
+| `--output` / `-o` | Where to save the MP4 |
+| `--music` / `-m` | Background track (optional) |
+| `--watermark` / `-w` | Logo PNG (optional) |
+| `--template` / `-t` | `minimal`, `modern`, `documentary`, `dark`, `tech`, `education` |
+| `--preset` / `-p` | `instagram`, `youtube_shorts`, `tiktok` |
+| `--duration` / `-d` | Seconds per slide (default ~3) |
+
+Landscape photos get a **blurred background** automatically so they still fill 1080×1920.
+
+### Try the bundled sample
+
+```bash
 reelforge render \
   --images ./examples/slides \
-  --output reel.mp4 \
+  --music ./examples/audio/demo_music.mp3 \
+  --watermark ./assets/watermark.png \
+  --output ./examples/output/sample_reel.mp4 \
   --template modern \
-  --preset instagram
-
-# With music + watermark
-reelforge render \
-  --images ./slides \
-  --music ./music.mp3 \
-  --watermark ./logo.png \
-  --output reel.mp4 \
-  --template dark
+  --duration 2.0
 ```
 
 ### YAML config
