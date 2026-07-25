@@ -1,0 +1,17 @@
+description: Clear pacing with slides — ideal for lessons.
+animation:
+  type: kenburns
+  movement: pan_down
+  duration: 4.0
+  zoom_factor: 1.08
+transition:
+  type: slide
+  duration: 0.5
+progress_bar:
+  enabled: true
+  height: 8
+  color: "#4C6EF5"
+  show_counter: true
+colors:
+  accent: "#4C6EF5"
+  background: "#F8F9FA"

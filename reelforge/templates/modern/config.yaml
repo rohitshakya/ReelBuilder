@@ -1,0 +1,17 @@
+description: Bold CapCut-style energy — random Ken Burns + crossfades.
+animation:
+  type: kenburns
+  movement: random
+  duration: 3.0
+  zoom_factor: 1.15
+transition:
+  type: crossfade
+  duration: 0.45
+progress_bar:
+  enabled: true
+  height: 6
+  color: "#FF2D55"
+  show_counter: true
+colors:
+  accent: "#FF2D55"
+  background: "#0A0A0A"

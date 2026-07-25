@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="ReelForge">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#FF8A3D"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#0A0A0A"/>
+  <rect x="38" y="22" width="52" height="84" rx="10" fill="none" stroke="url(#g)" stroke-width="6"/>
+  <circle cx="64" cy="64" r="16" fill="url(#g)"/>
+  <circle cx="64" cy="64" r="6" fill="#0A0A0A"/>
+  <rect x="48" y="30" width="8" height="6" rx="2" fill="#FF2D55" opacity="0.9"/>
+  <rect x="72" y="30" width="8" height="6" rx="2" fill="#FF8A3D" opacity="0.9"/>
+</svg>

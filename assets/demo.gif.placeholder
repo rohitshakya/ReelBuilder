@@ -1,0 +1,5 @@
+# Placeholder for demo.gif
+#
+# Drop a short rendered preview here, e.g.:
+#   reelforge render -i examples/slides -o /tmp/demo.mp4 --template modern
+#   ffmpeg -i /tmp/demo.mp4 -vf "fps=12,scale=270:-1" -loop 0 assets/demo.gif

@@ -1,0 +1,17 @@
+description: Clean and restrained — soft fades, gentle zoom.
+animation:
+  type: kenburns
+  movement: zoom_in
+  duration: 3.5
+  zoom_factor: 1.08
+transition:
+  type: fade
+  duration: 0.6
+progress_bar:
+  enabled: true
+  height: 4
+  color: "#FFFFFF"
+  show_counter: false
+colors:
+  accent: "#FFFFFF"
+  background: "#000000"

@@ -1,0 +1,17 @@
+description: Snappy cuts and push transitions for product demos.
+animation:
+  type: kenburns
+  movement: zoom_out
+  duration: 2.5
+  zoom_factor: 1.12
+transition:
+  type: push
+  duration: 0.35
+progress_bar:
+  enabled: true
+  height: 6
+  color: "#7CFF6B"
+  show_counter: true
+colors:
+  accent: "#7CFF6B"
+  background: "#0D1117"

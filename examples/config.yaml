@@ -1,0 +1,47 @@
+# Example ReelForge configuration
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  crf: 18
+  hardware_accel: true
+
+animation:
+  type: kenburns
+  movement: random
+  duration: 3.0
+  zoom_factor: 1.15
+  easing: ease_in_out
+
+transition:
+  type: crossfade
+  duration: 0.5
+
+audio:
+  path: null  # or path/to/music.mp3
+  volume: 0.7
+  fade_in: 1.0
+  fade_out: 2.0
+  auto_trim: true
+  loop: true
+
+watermark:
+  path: null  # or path/to/logo.png
+  opacity: 0.7
+  scale: 0.12
+  position: bottom_right
+  margin: 40
+
+progress_bar:
+  enabled: true
+  height: 6
+  color: "#FF2D55"
+  background_color: "#00000080"
+  position: bottom
+  show_counter: true
+
+template: modern
+export_preset: custom
+workers: 4
+seed: 42

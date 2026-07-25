@@ -1,0 +1,17 @@
+description: Slow pans and long fades for storytelling.
+animation:
+  type: kenburns
+  movement: pan_right
+  duration: 4.5
+  zoom_factor: 1.10
+transition:
+  type: fade
+  duration: 1.0
+progress_bar:
+  enabled: true
+  height: 3
+  color: "#E8DCC8"
+  show_counter: true
+colors:
+  accent: "#E8DCC8"
+  background: "#1A1A1A"
